@@ -1,7 +1,4 @@
 import Image from "next/image";
-
-import { UserButton } from "@clerk/nextjs";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -46,7 +43,7 @@ export default function Home() {
         This website is made only for information and educational purposes.
         I/Ramesh do not own or affiliate with Dropbox or/and any of its
         subsidiaries in any form. Copyright Disclaimer under section 107 of the
-        copyright Act 1976, allowance is made for "fair use" of this website for
+        copyright Act 1976, allowance is made for fair use of this website for
         eduction purposes.
       </p>
     </main>
