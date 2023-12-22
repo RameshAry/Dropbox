@@ -31,11 +31,10 @@ function TableWrapper({ skeletonFiles }: { skeletonFiles: FileType[] }) {
       filename: doc.data().filename || doc.id,
       fullName: doc.data().fullName,
       timestamp: new Date(doc.data().timestamp?.seconds * 1000) || undefined,
-      downloadURL: doc.data().downloadURL,
+      downloadURL: doc.data()?.downloadURL,
       type: doc.data().type,
       size: doc.data().size,
     }));
-    console.log(files);
     setInitialFiles(files);
   }, [docs]);
 

@@ -41,21 +41,25 @@ export const columns: ColumnDef<FileType>[] = [
       return <span>{prettyBytes(renderValue() as number)}</span>;
     },
   },
-  //   {
-  //     accessorKey: "downloadURL",
-  //     header: "Link URL",
-  //     cell: ({ renderValue, ...props }) => {
-  //       return (
-  //         <>
-  //           <Link
-  //             href={renderValue() as string}
-  //             target="_blank"
-  //             className="underline text-blue-500 hover:text-blue-600"
-  //           >
-  //             Download
-  //           </Link>
-  //         </>
-  //       );
-  //     },
-  //   },
+  {
+    accessorKey: "downloadURL",
+    header: "Link URL",
+    cell: ({ renderValue, ...props }) => {
+      return (
+        <>
+          {renderValue() ? (
+            <Link
+              href={renderValue() as string}
+              target="_blank"
+              className="underline text-blue-500 hover:text-blue-600"
+            >
+              Download
+            </Link>
+          ) : (
+            <span>Loading...</span>
+          )}
+        </>
+      );
+    },
+  },
 ];
